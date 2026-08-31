@@ -7,7 +7,7 @@ returns to the packing station. Racking blocks direct movement, so travel is res
 17 horizontal aisles and 3 vertical corridors. The question is which order to visit the
 stops in.
 
-Walking distances come from graph search on the aisle network — uniform cost search to build
+Walking distances come from graph search on the aisle network - uniform cost search to build
 the 466 × 466 distance matrix, A\* to answer single-pair queries and verify that matrix
 independently. **Simulated Annealing** and a **Genetic Algorithm** then compete to find the
 shortest visiting order. The search layer is the cost model; the two metaheuristics are what
@@ -26,8 +26,8 @@ Measured on 2,225 picking waves from July 2023 onwards, held out entirely from t
 ![The largest held-out wave, walked in the company's order and in the order simulated annealing found](figures/fig2_before_after.png)
 
 Simulated annealing wins on quality (Wilcoxon p < 0.001 on both tuning and held-out waves),
-on consistency, and on cost. It is not a large margin in route length — the two find the
-identical route on 70% of waves — but the genetic algorithm loses on every axis at once.
+on consistency, and on cost. It is not a large margin in route length - the two find the
+identical route on 70% of waves - but the genetic algorithm loses on every axis at once.
 
 The project's most useful finding was a mistake in its own method. The cooling schedule was
 originally chosen on waves small enough that the four candidates were separated by less than
@@ -102,6 +102,3 @@ Open `notebooks/Nguyen_LeBinh_AT1_1_notebook.ipynb` in Google Colab and run all 
 The two long experiments cache their results to Drive, so a second run reloads them instead
 of repeating about twenty minutes of work. Deleting those CSVs forces a fresh run.
 
-## Status
-
-Built for 42172 Introduction to AI, University of Technology Sydney.
